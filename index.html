@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вікторина: Європейські столиці</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="quiz-header">
+            <h1>🏛️ Вікторина: Європейські столиці</h1>
+            <div class="game-stats">
+                <div class="progress-container">
+                    <span id="progress">Натисніть "Почати гру"</span>
+                </div>
+                <div class="money-container">
+                    <span id="money">💰 0 грн</span>
+                </div>
+            </div>
+        </header>
+
+        <main class="quiz-main">
+            <!-- Start screen -->
+            <div id="start-screen" class="screen active">
+                <div class="card start-card">
+                    <div class="card__body">
+                        <h2>Готові перевірити свої знання?</h2>
+                        <p>Відповідайте на питання про європейські столиці та заробляйте віртуальні гроші!</p>
+                        <ul class="rules-list">
+                            <li>📝 20 питань на гру</li>
+                            <li>💰 1000 грн за правильну відповідь</li>
+                            <li>❌ Одна помилка - гра починається заново</li>
+                            <li>🏆 Відповісти правильно на всі 20 = Перемога!</li>
+                        </ul>
+                        <button id="start-btn" class="btn btn--primary btn--lg btn--full-width">
+                            Почати гру
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Game screen -->
+            <div id="game-screen" class="screen">
+                <div class="card question-card">
+                    <div class="card__body">
+                        <div class="question-container">
+                            <h3 id="question-text">Питання з'явиться тут</h3>
+                        </div>
+                        <div class="answers-container">
+                            <button class="answer-btn" data-answer="0"></button>
+                            <button class="answer-btn" data-answer="1"></button>
+                            <button class="answer-btn" data-answer="2"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Result screen -->
+            <div id="result-screen" class="screen">
+                <div class="card result-card">
+                    <div class="card__body">
+                        <div class="result-content">
+                            <div id="result-icon"></div>
+                            <h2 id="result-title"></h2>
+                            <p id="result-message"></p>
+                            <div id="result-money"></div>
+                            <button id="restart-btn" class="btn btn--primary btn--lg btn--full-width">
+                                Почати заново
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Answer feedback -->
+            <div id="answer-feedback" class="answer-feedback">
+                <div class="feedback-content">
+                    <span id="feedback-icon"></span>
+                    <span id="feedback-text"></span>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
